@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 
 plugins {
-    kotlin("jvm") version "2.4.10"
+    kotlin("jvm") version "2.4.20"
     id("com.google.protobuf") version "0.10.0"
 }
 
@@ -12,8 +12,8 @@ val sitegraphRulePackSha256 = "62195a9a9f6ec090a8e9094057f3e7cc569e4611b8fe5c6fa
 group = "io.github.nguyenthdat.burpmcp"
 version = providers.gradleProperty("version").orElse("3.3.0").get()
 
-val grpcVersion = "1.83.1"
-val protobufVersion = "4.36.0"
+val grpcVersion = "1.84.0"
+val protobufVersion = "4.36.1"
 
 repositories {
     mavenCentral()
@@ -52,7 +52,7 @@ dependencies {
     implementation("com.fasterxml.jackson.core:jackson-databind:2.22.2")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.22.2")
     implementation("com.google.re2j:re2j:1.8")
-    implementation("org.bouncycastle:bcpkix-jdk18on:1.85")
+    implementation("org.bouncycastle:bcpkix-jdk18on:1.86")
     compileOnly("org.apache.tomcat:annotations-api:6.0.53")
 
     testImplementation(kotlin("test-junit5"))
